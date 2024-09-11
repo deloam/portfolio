@@ -1,0 +1,16 @@
+/* src/components/Contact.css */
+
+/* Estilos para a seção de contato */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #555;
+}

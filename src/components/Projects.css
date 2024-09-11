@@ -1,0 +1,85 @@
+/* Container principal de projetos */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Divisão em colunas responsivas */
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Largura máxima para limitar o layout */
+}
+
+/* Cada item de projeto */
+.project-item {
+    background-color: #05194aff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-item:hover {
+    transform: translateY(-10px); /* Elevação ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.h3x{
+    color: #000;
+}
+/* Estilo para a imagem */
+.project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.project-image i{
+    font-size: 40px;
+    color: #fff !important;
+}
+
+/* Estilo do título */
+.project-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo das tecnologias usadas */
+.project-tech {
+    color: #00aaff;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo da descrição */
+.project-description {
+    color: #33a5be;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr; /* Coluna única em telas pequenas */
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .project-tech {
+        font-size: 0.85rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,35 @@
+/* Estilos para o header */
+.header {
+    padding: 80px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #05194a;
+    color: white;
+}
+
+.typing-text {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+/* Estilo do cursor */
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .header{
+        height: 100px;
+    }
+}

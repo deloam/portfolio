@@ -1,0 +1,214 @@
+/* navbar.css */
+
+/* Estilo geral do Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    background: #0b0334;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Evita overflow */
+}
+
+.navbar ul li a:hover {
+    background: #185073;
+    border-radius: 4px;
+}
+
+.cyclist-svg {
+    background-color: white;
+    color: #0ff;
+    fill: white;
+    height: auto;
+    width: 50px;
+    /* Ajuste conforme necessário */
+    margin-left: 10px;
+    /* Espaçamento entre o ciclista e a logo */
+    animation: pedal 1s infinite;
+    /* Animação do ciclista pedalando */
+}
+
+@keyframes pedal {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* Estilo do logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-svg {
+    fill: white;
+    width: 80px;
+    height: auto;
+}
+
+/* Estilo do botão do menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    /* Certifique-se de que está acima dos outros elementos */
+}
+
+/* Barras do menu hamburger */
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.5s;
+}
+
+/* Estilo do overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Cor do overlay */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 800;
+    /* Certifique-se de que está acima dos outros elementos */
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Estilo das links de navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.nav-links li {
+    width: 100%;
+    /* Faz o <li> ocupar 100% da largura */
+    text-align: center;
+    padding: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.5s, color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Adiciona uma leve alteração de cor ao passar o mouse */
+    border-radius: 4px;
+}
+
+/* Estilo dos links de navegação quando ativo */
+.nav-links.active {
+    pointer-events: auto;
+    /* Habilita o clique quando o menu está aberto */
+    max-height: 300px;
+    /* Ajuste conforme necessário para o tamanho do menu */
+    opacity: 1;
+    /* Torna visível */
+}
+
+/* Estilo responsivo para telas pequenas */
+@media (max-width: 768px) {
+    .navbar {
+        height: 60px;
+        z-index: 1001;
+    }
+
+    .logo-svg {
+        width: 60px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #05194a;
+        box-sizing: border-box;
+        max-height: 0;
+        /* Inicialmente escondido */
+        opacity: 0;
+        /* Inicialmente invisível */
+        transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+        /* Animação de deslizamento */
+        transform: translateY(-100%);
+        /* Inicia fora da tela */
+        pointer-events: none;
+        /* Evita interação enquanto o menu estiver fechado */
+    }
+
+    .nav-links li {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li a {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links.active {
+        padding: 0;
+        max-height: 280px;
+        opacity: 1;
+        transform: translateY(0);
+        /* Faz o menu descer ao abrir */
+        pointer-events: auto;
+        /* Habilita interação quando o menu está visível */
+    }
+
+    .nav-links.active li {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links.active li a {
+        padding: 5px;
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}

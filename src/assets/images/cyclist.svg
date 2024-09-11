@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Desenho da roda da frente -->
+  <circle cx="150" cy="150" r="40" stroke="black" stroke-width="4" fill="none" />
+  <!-- Desenho da roda de trás -->
+  <circle cx="50" cy="150" r="40" stroke="black" stroke-width="4" fill="none" />
+
+  <!-- Quadro da bicicleta -->
+  <line x1="50" y1="150" x2="100" y2="100" stroke="black" stroke-width="4" />
+  <line x1="100" y1="100" x2="150" y2="150" stroke="black" stroke-width="4" />
+  <line x1="100" y1="100" x2="100" y2="50" stroke="black" stroke-width="4" />
+  
+  <!-- Pedal e manivela -->
+  <line x1="100" y1="150" x2="110" y2="130" stroke="black" stroke-width="4" />
+  <circle cx="100" cy="150" r="10" fill="black" />
+  
+  <!-- Selim -->
+  <line x1="100" y1="100" x2="90" y2="80" stroke="black" stroke-width="4" />
+  
+  <!-- Guiador -->
+  <line x1="100" y1="50" x2="120" y2="60" stroke="black" stroke-width="4" />
+
+  <!-- Corpo do ciclista -->
+  <circle cx="100" cy="40" r="10" fill="black" />
+  <line x1="100" y1="50" x2="100" y2="80" stroke="black" stroke-width="4" />
+  <line x1="100" y1="60" x2="90" y2="70" stroke="black" stroke-width="4" />
+
+  <!-- Braço do ciclista -->
+  <line x1="100" y1="60" x2="120" y2="60" stroke="black" stroke-width="4" />
+
+  <!-- Pernas do ciclista -->
+  <line x1="100" y1="80" x2="110" y2="130" stroke="black" stroke-width="4" />
+  <line x1="100" y1="80" x2="90" y2="130" stroke="black" stroke-width="4" />
+</svg>
