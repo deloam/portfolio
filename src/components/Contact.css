@@ -1,16 +1,106 @@
-/* src/components/Contact.css */
-
-/* Estilos para a seção de contato */
-.social-links {
-    margin-top: 10px;
+.contact-section {
+    padding: 50px 0;
+    text-align: center;
 }
 
-.social-links a {
-    color: #333;
+.contact-header {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsivo para 2 colunas */
+    gap: 20px;
+    justify-items: center;
+}
+.contact-name{
+    font-size: 18px;
+}
+.contact-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 80%;
+    max-width: 300px;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    color: #0077b5;
+    /* Default LinkedIn color */
+    margin-bottom: 10px;
+}
+
+.contact-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-link {
     text-decoration: none;
-    margin: 0 10px;
+    color: inherit;
 }
 
-.social-links a:hover {
-    color: #555;
+.contact-link:hover {
+    color: #0077b5;
+    /* Mudar cor ao passar o mouse */
+}
+
+.contact-pdf {
+    font-size: 1.2rem;
+    color: #0077b5;
+    /* Cor azul para download de PDF */
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas para dispositivos móveis */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-name{
+        font-size: 15px;
+        margin: 0;
+    }
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas para dispositivos móveis */
+        column-gap: 5px;
+
+    }
+    .contact-card {
+        height: 100px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        width: 60%;
+        max-width: 300px;
+    }
+    .contact-icon {
+        font-size: 2rem;
+        color: #0077b5;
+        /* Default LinkedIn color */
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 290px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        /* 1 coluna para dispositivos muito pequenos */
+    }
 }

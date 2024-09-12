@@ -16,7 +16,6 @@ main {
   margin: 0 auto;
 }
 section {
-  width: 100%;
   margin-bottom: 60px;
   padding-top: 40px;
 }
@@ -31,4 +30,9 @@ footer {
   background: #0b0334;
   color: white;
   padding: 5px 0;
+}
+@media (max-width: 550px) {
+  footer {
+    font-size: 13px;
+  }
 }
